@@ -1,18 +1,18 @@
-/* WeatherDetails Component Styles */
-
+/* 🌟 WeatherDetails Component Styles */
 .weather-details {
   background: var(--glass-white-light);
   backdrop-filter: var(--blur-medium);
+  -webkit-backdrop-filter: var(--blur-medium);
   border-radius: 16px;
-  padding: 24px;
+  padding: clamp(1rem, 2vw, 1.5rem);
   border: 1px solid var(--border-glass);
   box-shadow: var(--shadow-glass);
   animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
 .weather-details h3 {
-  font-size: 20px;
-  margin-bottom: 24px;
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
   color: var(--text-primary);
   text-shadow: var(--shadow-text);
@@ -22,9 +22,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: clamp(0.75rem, 2vw, 1rem) 0;
   border-bottom: 1px solid var(--border-glass);
-  font-size: 16px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   transition: all 0.2s ease;
 }
 
@@ -33,10 +33,11 @@
 }
 
 .detail-item:hover {
-  background: var(--glass-white-light);
+  background: var(--glass-white);
   margin: 0 -12px;
-  padding: 16px 12px;
+  padding: clamp(0.75rem, 2vw, 1rem) 12px;
   border-radius: 8px;
+  box-shadow: var(--shadow-glass-strong);
 }
 
 .detail-item span:first-child {
@@ -51,30 +52,14 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .weather-details {
-    padding: 20px;
-  }
-  
-  .detail-item {
-    padding: 12px 0;
-    font-size: 15px;
-  }
+  .weather-details { padding: 20px; }
+  .detail-item { padding: 12px 0; font-size: 0.9375rem; }
 }
 
 @media (max-width: 480px) {
-  .weather-details {
-    padding: 16px;
-  }
-  
-  .weather-details h3 {
-    font-size: 18px;
-    margin-bottom: 16px;
-  }
-  
-  .detail-item {
-    padding: 10px 0;
-    font-size: 14px;
-  }
+  .weather-details { padding: 16px; }
+  .weather-details h3 { font-size: 1.125rem; margin-bottom: 16px; }
+  .detail-item { padding: 10px 0; font-size: 0.875rem; }
 }
 
 /* Entrance animation */

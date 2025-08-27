@@ -1,20 +1,28 @@
-/* ErrorMessage Component Styles */
-
+/* 🌟 ErrorMessage Component Styles */
 .error {
   position: absolute;
   bottom: 40px;
   left: 40px;
   right: 40px;
-  font-size: 24px;
-  color: var(--accent-red);
+  font-size: clamp(1.125rem, 2vw, 1.5rem); /* responsive font */
+  color: var(--accent-error);
   text-shadow: var(--shadow-text);
   background: var(--gradient-glass);
   backdrop-filter: var(--blur-medium);
+  -webkit-backdrop-filter: var(--blur-medium);
   padding: 24px 32px;
   border-radius: 16px;
   border: 1px solid var(--border-glass);
   box-shadow: var(--shadow-glass);
   text-align: center;
+  z-index: 10;
+  animation: fadeIn 0.4s ease-in-out; /* subtle entrance */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive design */
@@ -24,7 +32,7 @@
     left: 20px;
     right: 20px;
     padding: 20px 24px;
-    font-size: 20px;
+    font-size: clamp(1rem, 3vw, 1.25rem);
   }
 }
 
@@ -34,6 +42,6 @@
     left: 16px;
     right: 16px;
     padding: 16px 20px;
-    font-size: 18px;
+    font-size: clamp(0.875rem, 4vw, 1rem);
   }
 }

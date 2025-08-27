@@ -1,5 +1,4 @@
-/* SearchBar Component Styles */
-
+/* 🌟 SearchBar Component Styles */
 .search-section {
   margin-bottom: 40px;
 }
@@ -11,16 +10,17 @@
 
 .search-input {
   flex: 1;
-  padding: 16px 20px;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
   border: 1px solid var(--border-glass);
   border-radius: 12px;
   background: var(--glass-white-light);
   backdrop-filter: var(--blur-light);
+  -webkit-backdrop-filter: var(--blur-light);
   color: var(--text-primary);
-  font-size: 16px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-weight: 300;
   outline: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight: 300;
 }
 
 .search-input::placeholder {
@@ -34,26 +34,28 @@
   transform: translateY(-1px);
 }
 
+/* Search button */
 .search-button {
-  padding: 16px 20px;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
   border: 1px solid var(--border-glass);
   border-radius: 12px;
   background: var(--glass-white);
   backdrop-filter: var(--blur-light);
+  -webkit-backdrop-filter: var(--blur-light);
   color: var(--text-primary);
   cursor: pointer;
-  font-size: 18px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: clamp(1rem, 2vw, 1.125rem);
   box-shadow: var(--shadow-glass);
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 56px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-button::before {
   content: '⚲';
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 .search-button:hover {
@@ -65,29 +67,12 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .search-form {
-    gap: 8px;
-  }
-  
-  .search-input {
-    padding: 14px 16px;
-    font-size: 16px;
-  }
-  
-  .search-button {
-    padding: 14px 16px;
-    min-width: 48px;
-  }
+  .search-form { gap: 8px; }
+  .search-input { padding: 14px 16px; }
+  .search-button { padding: 14px 16px; min-width: 48px; }
 }
 
 @media (max-width: 480px) {
-  .search-input {
-    padding: 12px 14px;
-    font-size: 16px;
-  }
-  
-  .search-button {
-    padding: 12px 14px;
-    min-width: 44px;
-  }
+  .search-input { padding: 12px 14px; }
+  .search-button { padding: 12px 14px; min-width: 44px; }
 }
